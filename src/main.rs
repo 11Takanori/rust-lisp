@@ -71,6 +71,15 @@ struct Evaluator {
     genv: LRef,
 }
 
+impl Evaluator {
+    fn new() -> Evaluator {
+        Evaluator {
+            arena: Arena::new(),
+            genv: LRef(0),
+        }
+    }
+}
+
 fn read(str: String) -> String {
     str
 }
